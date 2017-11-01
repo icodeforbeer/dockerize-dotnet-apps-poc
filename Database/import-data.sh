@@ -6,3 +6,4 @@ sleep 10s
 
 #import the data from the csv file
 /opt/mssql-tools/bin/bcp DemoData.dbo.Products in "/app/Products.csv" -c -t',' -S localhost -U sa -P Passw0rd
+/opt/mssql-tools/bin/bcp DemoData.dbo.Employees in "/app/Employees.csv" -c -t',' -S localhost -U sa -P Passw0rd

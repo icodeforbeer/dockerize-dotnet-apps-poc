@@ -5,6 +5,7 @@ namespace king.Model
     public class ApplicationDbContext : DbContext
     {
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

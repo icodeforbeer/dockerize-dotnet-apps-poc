@@ -1,7 +1,7 @@
 version: "3"
 services:
-    webui:
-        build: ./webui
+    webng:
+        build: ./webng
         ports:
             - "5000:80"
         depends_on:
@@ -13,9 +13,12 @@ services:
         depends_on:
             - db
     db:
-        build: ./Database
+        image: microsoft/mssql-server-linux:2017-latest
+        volumes:
+            - "./Database:/app"
         environment:
             SA_PASSWORD: "Passw0rd"
             ACCEPT_EULA: "Y"
         ports:
             - "1433:1433"
+        command: /bin/bash /app/db-start.sh ; sleep infinity
