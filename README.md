@@ -2,7 +2,7 @@
 
 ## Pre Requisites
 
-You need to have [Docker](https://www.docker.com/community-edition#/download) installed on your machine.
+You need to have [Docker](https://hub.docker.com/search/?type=edition&offering=community) installed on your machine.
 
 ## Running the code
 
