@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.1-sdk-alpine AS builder
+FROM microsoft/dotnet:2.1.403-sdk AS builder
 COPY . /app
 WORKDIR /app
 LABEL intermediate="true"

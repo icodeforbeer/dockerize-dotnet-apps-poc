@@ -1,9 +1,8 @@
-1,Car
-2,Truck
-3,Motorcycle
-4,Bicycle
-5,Horse
-6,Boat
-7,Plane
-8,Scooter
-9,Skateboard
+1,Car, Moves small group of people from point A to point B, 15000.00, 12/31/2018
+2,Truck, Moves cargo from point A to point B, 75000.00, 12/31/2018
+3,Motorcycle, Moves at most a couple of people from point A to point B, 500.00, 12/31/2018
+4,Bicycle, Moves one or two people from point A to point B with their effort, 200.00, 12/31/2018
+5,Horse, Moves a person from point A to point B, 500.00, 12/31/2018
+6,Boat, Moves people from point A to point B over water, 85000.00, 12/31/2018
+7,Plane, Moves small group of people from point A to point B via air, 5000000.00, 12/31/2018
+8,Skateboard, Fun way of moving from point A to point B for any person, 45.00, 12/31/2018
