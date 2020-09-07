@@ -1,7 +1,7 @@
 ### STAGE 1: Build ###
 
 # We label our stage as 'builder'
-FROM node:8.11.2-alpine as builder
+FROM node:12-alpine as builder
 
 WORKDIR /usr/src/app
 
