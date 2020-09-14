@@ -1,0 +1,51 @@
+<mat-card *ngIf="currentProduct" class="product-form">
+    <mat-card-title>Edit {{currentProduct.productName}}</mat-card-title>
+    <form [formGroup]="productFormGroup" (ngSubmit)="updateProduct()">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Product Name" formControlName="productName">
+        <mat-error>
+          <span *ngIf="!productFormGroup.get('productName').valid && productFormGroup.get('productName').touched">
+            Please enter Product Name
+          </span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Product Desc" formControlName="productDescription">
+        <mat-error>
+          <span
+            *ngIf="!productFormGroup.get('productDescription').valid && productFormGroup.get('productDescription').touched">
+            Please enter Product Description
+          </span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Product Price" formControlName="productPrice">
+        <mat-error>
+          <span *ngIf="!productFormGroup.get('productPrice').valid && productFormGroup.get('productPrice').touched">
+            Please enter Product Price
+          </span>
+        </mat-error>
+      </mat-form-field>
+      <div class="full-width">
+        <mat-slide-toggle class="full-width" formControlName="available">Available</mat-slide-toggle>
+        <mat-error>
+          <span *ngIf="!productFormGroup.get('productPrice').valid && productFormGroup.get('productPrice').touched">
+            Please enter Product Price
+          </span>
+        </mat-error>
+      </div>
+      <div class="button-row">
+        <button type="submit" [disabled]="!productFormGroup.valid" mat-stroked-button color="primary">
+          <mat-icon>save</mat-icon>&nbsp;Save
+        </button>
+        &nbsp;&nbsp;
+        <button mat-stroked-button (click)="backToList()" color="warn">
+          <mat-icon>cancel</mat-icon>&nbsp;Cancel
+        </button>
+      </div>
+    </form>
+</mat-card>
+<div *ngIf="!currentProduct">
+  <br />
+  <p>Oops, coudn't find the product!</p>
+</div>

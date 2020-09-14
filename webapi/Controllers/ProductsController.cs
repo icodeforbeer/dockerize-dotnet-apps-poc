@@ -53,6 +53,7 @@ namespace king.Controllers
                 existing.ProductName = value.ProductName;
                 existing.ProductDescription = value.ProductDescription;
                 existing.ProductPrice = value.ProductPrice;
+                existing.Available = value.Available;
                 existing.UpdatedDate = DateTime.UtcNow;
                 await _context.SaveChangesAsync();
                 return CreatedAtAction(nameof(GetById), new { id = id }, existing);
