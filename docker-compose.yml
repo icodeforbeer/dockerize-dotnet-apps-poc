@@ -1,7 +1,7 @@
 version: "3"
 services:
     webng:
-        build: ./ng-app
+        build: ./ng-app-crud
         ports:
             - "5000:80"
         depends_on:
