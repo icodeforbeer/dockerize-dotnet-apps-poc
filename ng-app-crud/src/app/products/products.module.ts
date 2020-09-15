@@ -8,6 +8,7 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 import { ProductListComponent } from './components/product/product-list/product-list.component';
 import { ProductDetailsComponent } from './components/product/product-details/product-details.component';
 import { NgMaterialModule } from '../Modules/ng-material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,6 +19,8 @@ import { NgMaterialModule } from '../Modules/ng-material.module';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     ProductsRoutingModule,
     NgMaterialModule
   ]
